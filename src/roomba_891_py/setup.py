@@ -27,6 +27,7 @@ setup(
     entry_points={
         'console_scripts': [
             'differential_drive_controller = roomba_891_py.differential_drive_controller:main',
+            'pid_controller = roomba_891_py.pid_controller:main',
         ],
     },
 )

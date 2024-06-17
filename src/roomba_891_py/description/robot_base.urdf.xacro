@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="roomba_891">
+
+
+    <link name="world"></link>
+
+    <xacro:include filename="drivebase.xacro"/>
+
+
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.016" rpy="0.0 0.0 0.0"/>
+        <parent link="world"/>
+        <child link="chassis_link"/>
+    </joint>
+</robot>

@@ -67,7 +67,7 @@ class PIDController(Node):
         self.prev_error = error
         self.prev_time = current_time
 
-        self.get_logger().info(f'Error: {error}, Control Signal: {control_signal}, i: {i_term}, p: {p_term}, d: {d_term}')
+        # self.get_logger().info(f'Error: {error}, Control Signal: {control_signal}, i: {i_term}, p: {p_term}, d: {d_term}')
 
 def main():
     rclpy.init()

@@ -35,7 +35,7 @@ class DifferentialDriveController(Node):
         right_wheel_msg.data = right_wheel_vel
         self.right_wheel_pub.publish(right_wheel_msg)
 
-        self.get_logger().info(f'vX: {linear_vel}, vTheta: {angular_vel} -> vL: {left_wheel_vel}, vR: {right_wheel_vel}')
+        # self.get_logger().info(f'vX: {linear_vel}, vTheta: {angular_vel} -> vL: {left_wheel_vel}, vR: {right_wheel_vel}')
 
 def main():
     rclpy.init()

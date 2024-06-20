@@ -3,6 +3,7 @@
     <xacro:include filename="dimensions.xacro"/>
     <xacro:include filename="materials.xacro"/>
     <xacro:include filename="macros.xacro"/>
+    <xacro:include filename="gazebo.xacro"/>
     
     <link name="chassis_link">
         <visual>

@@ -5,6 +5,7 @@ package_name = 'roomba_891_py'
 
 launch_files = glob('launch/*.launch.py')
 description_files = glob('description/*.xacro')
+world_files = glob('worlds/*.sdf')
 
 setup(
     name=package_name,
@@ -16,6 +17,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', launch_files),
         ('share/' + package_name + '/description', description_files),
+        ('share/' + package_name + '/worlds', world_files),
+
     ],
     install_requires=['setuptools'],
     zip_safe=True,

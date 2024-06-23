@@ -24,11 +24,19 @@ def generate_launch_description():
                     }.items(),
                 )
     
+    node_gz_bridge = Node(package='ros_gz_bridge',
+                    executable='parameter_bridge',
+                    output='screen',
+                    arguments=[
+                        '/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model',
+                        '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
+                        ]
+                    )
+    
     create_entity = Node(package='ros_gz_sim',
                     executable='create',
                     arguments=['-topic', '/robot_description',
-                                '-entity', 'robot',
-                                '-z', '1.0',],
+                                '-entity', 'robot'],
                     output='screen')
     
     node_robot_state_publisher = Node(
@@ -44,5 +52,6 @@ def generate_launch_description():
     return LaunchDescription([
         gazebo,
         create_entity,
+        node_gz_bridge,
         node_robot_state_publisher,
     ])

@@ -19,6 +19,7 @@
   <depend>ros_gz_bridge</depend>
   <depend>ros_gz</depend>
   <depend>joy_linux</depend>
+  <exec_depend>python3-gpiozero</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

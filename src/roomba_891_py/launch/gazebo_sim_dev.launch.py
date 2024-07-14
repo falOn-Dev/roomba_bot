@@ -38,20 +38,10 @@ def generate_launch_description():
                     arguments=['-topic', '/robot_description',
                                 '-entity', 'robot'],
                     output='screen')
-    
-    node_robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        parameters=[{'robot_description': robot_description_raw}, {'use_sim_time': True}] # add other parameters here if required
-    )
-
-    
 
 
     return LaunchDescription([
         gazebo,
         create_entity,
         node_gz_bridge,
-        node_robot_state_publisher,
     ])
